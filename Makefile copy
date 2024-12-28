@@ -9,11 +9,12 @@
 #	2017-02-10 - Several enhancements + project update mode
 #   2015-07-22 - first version
 # ------------------------------------------------
+SRC_FILES = Core/Src/main.c Core/Src/init.c
 
 ######################################
 # target
 ######################################
-TARGET = Laboratory_Practice
+TARGET = F429ZI_CMSIS
 
 
 ######################################
@@ -29,7 +30,7 @@ OPT = -Og
 # paths
 #######################################
 # Build path
-BUILD_DIR = Build
+BUILD_DIR = build
 
 ######################################
 # source
@@ -162,7 +163,8 @@ $(BUILD_DIR):
 # clean up
 #######################################
 clean:
-	-rm -fR $(BUILD_DIR)
+    rmdir /s /q build;
+
   
 #######################################
 # openocd
